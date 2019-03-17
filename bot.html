@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129496579-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129496579-1');
+  
+  
+   know = {
+                "Dobar dan" : "Dobar dan, izvolite",
+                "Zdravo" : "Dobar dan, izvolite",
+                "Ne mogu da rezervisem letovanje" : "Objasnite nam u cemu je problem",
+				"Dugme za rezervaciju ne radi" : "Izvinjavamo, imamo manjih tehnickih poteskoca, probajte da nas pozovete pa cemo vam mi rezervisati",
+				"Ne razumem kako sajt funkcionise" : "Nije problem obratite nam se na email ili nas pozovite na broj xxx/xxxxxxx/xxx",
+				"Treba mi pomoc" : "Kako mozemo da vam pomognemo",
+				
+				"dobar dan" : "Dobar dan, izvolite",
+                "zdravo" : "Dobar dan, izvolite",
+                "ne mogu da rezervisem letovanje" : "Objasnite nam u cemu je problem",
+				"dugme za rezervaciju ne radi" : "Izvinjavamo, imamo manjih tehnickih poteskoca, probajte da nas pozovete pa cemo vam mi rezervisati",
+				"ne razumem kako sajt funkcionise" : "Nije problem obratite nam se na email ili nas pozovite na broj xxx/xxxxxxx/xxx",
+				"treba mi pomoc" : "Kako mozemo da vam pomognemo"
+				
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "Ako vam chatbot nije pomogao probajte da nas kontaktirate putem nasega email-a, ili telefona kojeg mozete da njadjete u sekciji kontakt<br>";
+                }
+            } 
+			
+			
+			
+			
+  
+</script>
+
+<link rel="shortcut icon" type="image/png" href="img/a.png">
+<title>Bulovic tours Novi Sad</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kontakt podaci za Bulovic tours, mi vozimo vas gde god zelite.">
+<meta name="keywords" content="Turisticka agencija, Rim, Pariz, Bulovic Tours, Home, Tours, Agencija, Novi sad, Njujork, Rezervacija, Putovanje ">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html" alt="pocetna">Home</a></li>
+			<li><a href="rezervacija.html" alt="rezervacije">Rezervacija</a></li>
+			<li><a href="kontakt.html"alt="kontakti">Kontakt</a></li>
+			<li><a href="bot.html"alt="bot">Bot</a></li>
+		</ul>	
+	</nav>
+</header>
+
+<section class="home-hero parallax--bg">
+	<div class="container">
+ <p id="chatLog">-Podrska za kupce-chatbot<br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+		<h2>PAZNJA-odgovori su automatski generisani, sto znaci da ne razgovarate sa osobom nego sa kompjuterom, ukoliko vam ovo ne pomogne uvek mozete da nas kontaktirate na email ili nas telefon i razovarate sa osobom uzivo. Hvala na razumevanju. </h2>
+		<h2>Neke od fraza koje mozete da iskoristite su <br>-Ne mogu da rezervisem letovanje <br>Dugme za rezervaciju ne radi<br>Ne razumem kako sajt funkcionise<br>Treba mi pomoc<br></h2>
+
+</div>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+ 
+		<script src="js/parallax.js"></script>
+		
+</body>
+</html>
